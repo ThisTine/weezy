@@ -1,4 +1,4 @@
-import { Badge, Box, Button, Heading, HStack, Skeleton, useToast, VStack } from "@chakra-ui/react"
+import { Badge, Box, Button, Heading, HStack, Skeleton, Stack, useToast, VStack } from "@chakra-ui/react"
 import CropContainer from "../components/CropContainer"
 import NextLink from 'next/link'
 import ProgressTab from "../components/ProgressTab"
@@ -53,6 +53,10 @@ const Dashboard = ()=>{
         {role==="developer" && <HStack w="100%" paddingY={5} justifyContent={"center"} > <Button rounded={"full"} colorScheme={"green"} > งานที่ทำอยู่</Button> 
         <NextLink href={"/work"}><Button rounded={"full"}>หางานที่เปิดอยู่</Button></NextLink>  </HStack>}
         <Heading>สวัสดี, คุณ {aka} 👋</Heading>
+        <Stack direction={{base:"column",md:"row"}} shadow={"lg"} justifyContent={"space-between"} p={5} w="100%" bgGradient={"linear(to-br,blue.300,blue.600)"} rounded={"xl"} marginY={5} >
+            <Heading color="white">ช่วยเราพัฒนา Weezy</Heading>
+            <Button colorScheme={"pink"} rounded={"full"} as="a" href="https://forms.gle/ySYrXGEpUAie7t9e6" target={"_blank"}  >กรอกแบบฟอร์ม feedback ของเรา</Button>
+        </Stack>
 
         {isloadingdata && <VStack w="100%" spacing={5}>
             <VStack cursor={"pointer"} w="100%" bg="white" p={5} paddingY={10} shadow={"lg"} rounded={"xl"} >
