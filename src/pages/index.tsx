@@ -134,10 +134,11 @@ const Index = () => {
     
       <Box  w="100%" paddingY={3} pos="fixed" top="0" transform={`translateY(${isscroll ?  "0%" :"-100%"})`} shadow="base" transition={"all 0.2s"} bg="white" zIndex={999}>
       <HStack justifyContent={"flex-end"} width="95%" >
-      {/* <Button colorScheme={"purple"} as="a" href="https://forms.gle/dncGcfYnF7h3wu5r9" target={"_blank"} >เข้าร่วมการทดสอบของเรา</Button> */}
       <NextLink href={isloggedin ? "/dashboard" : "/register" } >
         <Button size="md" colorScheme={"blue"}  rounded={"full"} as="a" href={isloggedin ? "/dashboard" : "/register" } >{isloggedin ? "เข้าสู่ระบบ" : "เริ่มต้นใช้งาน"}</Button>
         </NextLink>
+      <Button colorScheme={"purple"} onClick={onOpen} rounded={"full"} >ฉันสนใจ Project นี้</Button>
+
       </HStack>
       </Box>
   
