@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-weezy-dev-134921-authRole",
+      "UnauthRoleArn": "arn:aws:iam::710160678096:role/amplify-weezy-dev-134921-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::710160678096:role/amplify-weezy-dev-134921-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-weezy-dev-134921-deployment",
+      "UnauthRoleName": "amplify-weezy-dev-134921-unauthRole",
+      "StackName": "amplify-weezy-dev-134921",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:710160678096:stack/amplify-weezy-dev-134921/aeba9410-4384-11ec-96be-0a658014e544",
+      "AmplifyAppId": "d3myia8o02egt2"
+    },
+    "categories": {
+      "auth": {
+        "weezy6db9b01d": {}
+      }
+    }
+  }
+}

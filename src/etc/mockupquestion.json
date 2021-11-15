@@ -1,0 +1,23 @@
+[
+    {   "id":"title",
+        "question":"ตั้งชือ Project ของคุณหน่อย ?",
+        "placeholder":"ชื่อ Project",
+        "type":"text",
+        "isrequire":true
+    },
+    {
+        "id":"description",
+        "question":"บอกอะไรหน่อยเกี่ยวกับ project ของคุณ",
+        "placeholder":"งาน web application สำหรับร้านอาหาร ที่ฟังก์ชั่นต่าง ๆ .....",
+        "type":"textarea"
+    },
+    {
+    "question":"คุณจะสร้าง website สำหรับอะไร ?",
+    "id":"type",
+    "placeholder":"อื่น ๆ",
+    "type":"select",
+    "choices": ["ร้านขายของ","blog","เว็บไซต์สำหรับองค์กร"],
+    "isother": true,
+    "isrequire":true
+    }
+]

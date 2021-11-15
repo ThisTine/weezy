@@ -1,0 +1,62 @@
+type Work @model @key(name:"byUser",fields:["userID","title","time","detail","link"])
+{
+  id: ID!
+  userID: ID!
+  title: String!
+  time:String!
+  detail:String!
+  link:String
+}
+
+type User @model {
+  id: ID!
+  firstname:String!
+  lastname:String!
+  email: String!
+  aka:String
+  role:String!
+  description: String
+  works: [Work] @connection(keyName: "byUser",fields:["id"])
+}
+
+type Project @model @searchable
+{
+  id: ID!
+  name: String!,
+  description: String
+  other:String
+  designtool:String!
+  designdata:String
+  ownerID:ID!
+  owner:User @connection(fields:["ownerID"])
+  status:String!
+  developerID:ID
+  dev: User @connection(fields:["developerID"])
+  offers: [Offer] @connection(keyName:"byProject",fields:["id"])
+  updates: [DeveloperUpdate] @connection(keyName:"byProjectUpdate",fields:["id"])
+}
+
+type DeveloperUpdate @model
+  @key(name:"byProjectUpdate",fields:["projectID","title","subtitle","description"])
+{
+  id: ID!,
+  projectID: ID!,
+  title: String!,
+  subtitle: String,
+  description: String!
+  createdAt:String!
+  devID:ID!,
+  dev: User! @connection(fields:["devID"])
+}
+
+type Offer @model
+  @key(name:"byProject",fields:["projectID","price","description"])
+ {
+  id: ID!,
+  projectID: ID!
+  description: String!
+  price: Int!
+  offerOwnerID: ID!
+  offerOwner: User @connection(fields:["offerOwnerID"])
+}
+
