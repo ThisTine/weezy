@@ -3,10 +3,10 @@ import { useContext, useEffect, useState } from "react"
 import { GrAdd } from "react-icons/gr"
 import WorkModel from "./EditWorkModel"
 import {API, graphqlOperation} from 'aws-amplify'
-import { onCreateWork, onUpdateWork } from "../graphql/subscriptions"
+// import { onCreateWork, onUpdateWork } from "../graphql/subscriptions"
 import { AuthContext } from "../contexts/AuthContextProvider"
-import { listWorks } from "../graphql/queries"
-import { ListWorksQuery, Work } from "../API"
+import { getUser, listWorks } from "../graphql/queries"
+import { GetUserQuery, ListWorksQuery, Work } from "../API"
 
 const PastWork = ()=>{
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -18,10 +18,10 @@ const PastWork = ()=>{
     useEffect(()=>{
         const getdata = async()=>{
           try{
-            const data = await (API.graphql(graphqlOperation(listWorks,{userID:uid})) as Promise<{data:ListWorksQuery}> )
+            const data = await (API.graphql(graphqlOperation(getUser,{id:uid})) as Promise<{data:GetUserQuery}> )
             setisgettingdata(false)
-            if(data.data){
-              setdatalist([...data.data.listWorks.items])
+            if(data.data.getUser.works){
+              setdatalist([...data.data.getUser.works.items])
             }
           }catch(err){
             console.log(err)

@@ -2,10 +2,10 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 import { v4 as uuidv4 } from 'uuid';
 const awsConfig = {
-    "region": "us-east-2",
-    "endpoint": "https://dynamodb.us-east-2.amazonaws.com",
-    "accessKeyId":"AKIA2KWG77TINE2P2CVC",
-    "secretAccessKey":"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"
+    "region": process.env.REGION,
+    "endpoint": process.env.ENDPOINT,
+    "accessKeyId":process.env.ACCESSKEYID,
+    "secretAccessKey": process.env.SECRETACCESSKEY
 }
 const AWS = require("aws-sdk")
 AWS.config.update(awsConfig)
