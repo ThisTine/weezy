@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:url"            content="https://weezy.thistine.com"       />
         <meta property="og:title" content="Weezy | You design We refine"          />
         <meta property="og:description" content="Weezy-One-stop service platform ที่จะทำให้การออกแบบ Web Application และการค้นหา ติดต่อdeveloper สะดวกและเป็นระบบมากยิ่งขึ้น" />
-        <meta property="og:image" content="https://weezy.thistine.com/ogimage.jpg"  />
+        <meta property="og:image" content="https://weezy.thistine.com/ogimage2.jpg"  />
       </Head>
       <NextNProgress />
       <Modal isOpen={(path === "/login" || path === "/register") ? ison : false} onClose={()=>setison(false)}>

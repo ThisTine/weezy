@@ -26,7 +26,7 @@ import {
 } from '@chakra-ui/react'
 import React, { useContext, useEffect, useState } from 'react'
 import lottie from 'lottie-web'
-import logo from '../animation/logo2.json'
+import logo from '../animation/logo3.json'
 import designicon from "../animation/design.json"
 import Span from '../components/Span'
 import question from '../animation/question.json'
@@ -143,7 +143,7 @@ const Index = () => {
       </Box>
   
   <VStack spacing={0} bg="white" >
-    <VStack pos="relative" w="100%" overflow="hidden"  bgGradient="linear(to-br,#FF00C7,#FF9900)" justifyContent="flex-start" h="100vh" alignItems="center">
+    <VStack pos="relative" w="100%" overflow="hidden"  bgGradient="linear(to-br,#ffbfa5,#ffb4b8)" justifyContent="flex-start" h="100vh" alignItems="center">
     <Stack dir="column" w={["70%","90%","80%"]} justifyContent={"center"} alignItems={"center"} h="100%" spacing={5}>
     <Box w={["95%","80%","30%"]} id="logo" mt={10}></Box>
       <VStack pb={20}>

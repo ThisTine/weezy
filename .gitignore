@@ -6,6 +6,7 @@
 .pnp.js
 next.config.js
 email.html
+invite.html
 
 # testing
 /coverage
