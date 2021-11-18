@@ -192,7 +192,7 @@ const Index = () => {
         <Grid templateColumns="repeat(2,1fr)"  gap={5}>
           {["ทำยังไง ?","จะหา designer ที่ไหน ?","แล้ว design งานจะตรงใจเราแค่ไหน ?","จะหา developer จากไหน ?","แล้ว developer ที่หาได้จะดีแค่ไหน ?","ทั้งหมดราคาเท่าไหร่ ?"].map((item,id)=>{
             return(
-              <VStack data-aos="flip-up" data-aos-delay={(id*50)} key={id} p={5} justifyContent="center"  bgGradient={"linear(to-br,#FF00C7,#FF9900)"} rounded={"2xl"}>
+              <VStack data-aos="flip-up" data-aos-delay={(id*50)} key={id} p={5} justifyContent="center"  bgGradient={"linear(to-br,#ffbfa5,#ffb4b8)"} rounded={"2xl"}>
                 <Heading size="md" color="white">{item}</Heading>
               </VStack>
             )
