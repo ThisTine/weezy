@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Script>
       <Head>
         <title>Weezy | You design We refine</title>
-        <link rel="shortcut icon" href="/logo.png"/>
+        <link rel="shortcut icon" href="/logo2.png"/>
         <meta property="og:url"            content="https://weezy.thistine.com"       />
         <meta property="og:title" content="Weezy | You design We refine"          />
         <meta property="og:description" content="Weezy-One-stop service platform ที่จะทำให้การออกแบบ Web Application และการค้นหา ติดต่อdeveloper สะดวกและเป็นระบบมากยิ่งขึ้น" />
